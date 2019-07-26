@@ -10,5 +10,5 @@ export default function DisplaySmurfs() {
 		dispatch(getSmurfs())
 	}, [smurfs])
 
-	return <div>Hello</div>
+	return <div>Hello Smurfy People</div>
 }
