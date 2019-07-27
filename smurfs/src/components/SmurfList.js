@@ -7,7 +7,7 @@ const SmurfsList = ({ smurfs, deleteSmurf, setSmurfInfo, setIsEditing }) => {
 	if (smurfs) {
 		return (
 			<div>
-				<h1>Smurfs List Yo!</h1>
+				{/* <h1 className="header-text">Welcome To The Jungle</h1> */}
 				{smurfs.map(smurf => (
 					<Smurf
 						setIsEditing={setIsEditing}

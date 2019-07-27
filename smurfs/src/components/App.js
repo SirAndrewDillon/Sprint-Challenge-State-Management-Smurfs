@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
+import Navbar from './Navbar'
 import { fetchSmurfs, addSmurf, deleteSmurf, editSmurf } from '../store/actions'
-
-import SmurfsList from './SmurfsList'
+import image from '../assets/smurfette.png'
+import images from '../assets/papa.png'
+import SmurfList from './SmurfList'
 import SmurfForm from './SmurfForm'
 
 import './App.css'
@@ -25,9 +27,13 @@ const App = ({
 	if (smurfs && addSmurf) {
 		return (
 			<div className="App">
-				<h1>SMURFS! 2.0 W/ Redux</h1>
+				<Navbar />
+				<img className="profile-image" alt="icon" src={image} />
+				<span className="second-smurf">
+					<img className="profile-images" alt="icon" src={images} />
+				</span>
 
-				<SmurfsList
+				<SmurfList
 					/* setIsEditing={setIsEditing}
 					setSmurfInfo={setSmurfInfo} */
 					deleteSmurf={deleteSmurf}
